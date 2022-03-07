@@ -1,0 +1,50 @@
+.App {
+  text-align: center; 
+}
+
+.content-body {
+  /* padding: 0px 200px; */
+}
+
+.list {
+  list-style: none;
+}
+
+header { 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 1;
+  padding:0px 50px;
+  color: antiquewhite;
+}
+
+.header-list {
+  display: flex;
+}
+
+.header-list-item {
+  margin: 0px 10px;
+}
+
+footer {
+  border-top: solid black 2px ;
+  display: flex;
+  align-items:baseline;
+  justify-content: space-evenly;
+  padding: 50px 0px;
+}
+
+.list-label {
+  font-weight: bold;
+}
+
+.top-banner {
+  background-image:url("./images/mountains.png");
+  color: antiquewhite;
+}
+
+.content-title {
+  font-size: 70px;
+  margin: 0px;
+}
