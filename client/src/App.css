@@ -1,9 +1,5 @@
 .App {
-  text-align: center; 
-}
-
-.content-body {
-  /* padding: 0px 200px; */
+  /* text-align: center;  */
 }
 
 .list {
@@ -44,7 +40,25 @@ footer {
   color: antiquewhite;
 }
 
-.content-title {
+.top-banner-title {
+  padding:  10px 50px;
+}
+
+.content {
+  display: flex;
+}
+
+.page-title {
   font-size: 70px;
   margin: 0px;
+  
+}
+
+.content-paragraph {
+  flex: 1;
+  padding: 50px 150px;
+}
+
+.left {
+  border-right: solid black 3px; 
 }

@@ -6,8 +6,8 @@ import AboutUs from './components/AboutUs';
 
 
 function App() {
-  const title = "Robert Merullo"
-  const phone = "(303)638-1792"
+  const title = "Bob Merullo"
+  const phone = "(303)867-5309"
   const email = "bmerullo85@gmail.com"
 
   return (
