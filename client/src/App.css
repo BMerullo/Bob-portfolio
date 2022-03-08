@@ -29,6 +29,9 @@ footer {
   align-items:baseline;
   justify-content: space-evenly;
   padding: 50px 0px;
+  width: 85%;
+  margin: auto;
+
 }
 
 .list-label {
@@ -41,7 +44,8 @@ footer {
 }
 
 .top-banner-title {
-  padding:  10px 50px;
+  /* padding:  10px 50px; */
+  padding: 30px 0px 30px 150px;
 }
 
 .content {
@@ -60,5 +64,5 @@ footer {
 }
 
 .left {
-  border-right: solid black 3px; 
+  border-right: solid black 3px;   
 }
