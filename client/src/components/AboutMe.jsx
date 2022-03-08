@@ -1,6 +1,6 @@
-import Header from '../components/Header';
+import Header from './Header';
 
-const AboutUs = (props) => {
+const AboutMe = (props) => {
     const { title } = props
     return (
         <div className="content-body">
@@ -8,7 +8,7 @@ const AboutUs = (props) => {
                 <Header title={title} />
                 <div className="top-banner-title">
                     <h1 className="page-title">About Me</h1>
-                    <p>Learn what I am all about</p>
+                    <p>What about Bob?</p>
                 </div>
             </div>
             <div className="content">
@@ -25,4 +25,4 @@ const AboutUs = (props) => {
     )
 }
 
-export default AboutUs;
+export default AboutMe;

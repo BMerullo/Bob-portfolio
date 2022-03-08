@@ -1,5 +1,6 @@
 .App {
   /* text-align: center;  */
+  font-family: 'Arvo', serif;
 }
 
 .list {
@@ -29,7 +30,7 @@ footer {
   align-items:baseline;
   justify-content: space-evenly;
   padding: 50px 0px;
-  width: 85%;
+  /* width: 85%; */
   margin: auto;
 
 }
@@ -39,7 +40,7 @@ footer {
 }
 
 .top-banner {
-  background-image:url("./images/mountains.png");
+  background-image:url("./images/goldfish.jpeg");
   color: antiquewhite;
 }
 
@@ -50,6 +51,9 @@ footer {
 
 .content {
   display: flex;
+  background-color: #f7f4f4;
+  width: 85%;
+  margin: auto;
 }
 
 .page-title {
@@ -60,9 +64,12 @@ footer {
 
 .content-paragraph {
   flex: 1;
-  padding: 50px 150px;
+  padding: 150px 150px;
+  margin: 0;
+  
 }
 
 .left {
-  border-right: solid black 3px;   
+  border-right: dotted black 3px;
+  
 }
