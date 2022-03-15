@@ -4,7 +4,7 @@ const AboutMe = (props) => {
     const { title } = props
     return (
         <div className="content-body">
-            <div className="top-banner">
+            <div className="about-background banner">
                 <Header title={title} />
                 <div className="top-banner-title">
                     <h1 className="page-title">About Me</h1>

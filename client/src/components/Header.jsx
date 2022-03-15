@@ -1,4 +1,5 @@
-
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 const Header = (props) => {
@@ -9,10 +10,10 @@ const Header = (props) => {
             <header>
                 <h1 className="title">{title}</h1>
                 <ul className="list header-list">
-                    <li className="header-list-item">About Me</li>
-                    <li className="header-list-item">Projects</li>
-                    <li className="header-list-item">Skills</li>
-                    <li className="header-list-item">Resume</li>
+                    <li className="header-list-item"><Link className="nav-link" to="/aboutme">About Me</Link></li>
+                    <li className="header-list-item"><Link className="nav-link" to="/skills">Skills</Link></li>
+                    <li className="header-list-item"><Link className="nav-link" to="/projects">Projects</Link></li>
+                    <li className="header-list-item"><Link className="nav-link" to="/resume">Resume</Link></li>
                 </ul>
             </header>       
     )
