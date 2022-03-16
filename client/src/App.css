@@ -16,6 +16,11 @@ header {
   color: antiquewhite;
 }
 
+.skills-flex {
+  display: flex;
+  justify-content: center;
+}
+
 .header-list {
   display: flex;
 }
@@ -33,6 +38,23 @@ header {
   color: black;
 }
 
+
+
+/* .contact-link-container {
+
+} */
+
+.footer-img {
+  height: 20px;
+  margin-left: 10px;
+}
+
+.footer-link-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 footer {
   border-top: solid black 1px ;
   display: flex;
@@ -47,6 +69,8 @@ footer {
 .list-label {
   font-weight: bold;
 }
+
+
 
 .banner {
   color: antiquewhite;
@@ -76,6 +100,8 @@ footer {
   margin: auto;
   padding: 15px;
 }
+
+
 
 .page-title {
   font-size: 70px;
@@ -108,6 +134,14 @@ footer {
   
 }
 
+.carousel-cont {
+  margin: auto;
+  width: 500px;
+  padding: 60px;
+}
+
 .carousel-img {
   height: 200px;
+  margin: auto;
 }
+
