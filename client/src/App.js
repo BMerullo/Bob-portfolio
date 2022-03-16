@@ -7,6 +7,7 @@ import LandingPage from './components/LandingPage';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Resume from './components/Resume';
+import Carousel from './components/Carousel';
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/skills" element={<Skills title={title}/>}/>
         <Route path="/projects" element={<Projects title={title}/>}/>
         <Route path="/resume" element={<Resume title={title}/>}/>
+        <Route path="/test1" element={<Carousel/>} />
         
       </Routes>
       <Footer

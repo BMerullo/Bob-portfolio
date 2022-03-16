@@ -97,8 +97,17 @@ footer {
 
 .resume-div {
   background-color: #999;
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px;
+  
 }
 
 .resume-img {
-  margin-left: 50px;
+  height: 1000px;
+  
+}
+
+.carousel-img {
+  height: 200px;
 }
