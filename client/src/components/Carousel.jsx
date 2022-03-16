@@ -6,7 +6,7 @@ import expressImg from '../images/express-img.png'
 export default class extends React.Component {
     render() {
         return (
-            <Carousel>
+            <Carousel autoplay="true" autoplayReverse="true">
                 <img className="carousel-img" src={reactImg} />
                 <img className="carousel-img" src={expressImg} />
                 {/* <img src="https://via.placeholder.com/400/ffffff/c0392b/&text=slide3" />
