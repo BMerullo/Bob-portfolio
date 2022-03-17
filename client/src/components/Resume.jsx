@@ -5,12 +5,12 @@ import Header from './Header';
 
 const Resume = (props) => {
 
-    const {title} = props
+    const { title } = props
 
     return (
         <div className="content-body">
-            <div className="about-background banner">
-                <Header title={title} />
+            <Header title={title} />
+            <div className="resume-background banner">
                 <div className="top-banner-title">
                     <h1 className="page-title">Resume</h1>
                     <p>Bob's porfessional resume</p>

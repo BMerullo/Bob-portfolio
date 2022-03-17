@@ -17,10 +17,10 @@ const Footer = (props) => {
             <div>
                 <ul className="list footer-list">
                 <label className="list-label">Explore</label>
-                    <li><Link className="nav-link" id="footer-link" to="/aboutme">About Me</Link></li>
+                    <li><Link className="nav-link" id="footer-link" to="/aboutme">About</Link></li>
                     <li><Link className="nav-link" id="footer-link" to="/skills">Skills</Link></li>
                     <li><Link className="nav-link" id="footer-link" to="/projects">Projects</Link></li>
-                    <li><Link className="nav-link" id="footer-link" to="/resume">Resume</Link></li>
+                    {/* <li><Link className="nav-link" id="footer-link" to="/resume">Resume</Link></li> */}
                 </ul>
             </div>
             <div className="contact-link-container">
