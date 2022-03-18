@@ -13,8 +13,8 @@ const Skills = (props) => {
     return (
         <div>
             <div className="content-body">
+                <Header title={title} />
                 <div className="skills-background banner">
-                    <Header title={title} />
                     <div className="top-banner-title">
                         <h1 className="page-title">Skills</h1>
                         <p>Here are my skills</p>

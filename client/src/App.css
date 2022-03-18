@@ -1,6 +1,7 @@
 .App {
   /* text-align: center;  */
   font-family: 'Arvo', serif;
+  background-color: blanchedalmond;
 }
 
 .list {
@@ -13,7 +14,10 @@ header {
   justify-content: space-between;
   opacity: 1;
   padding:0px 50px;
-  color: antiquewhite;
+  color: olive;
+  background-color: blanchedalmond;
+  position: fixed;
+  width: 100%;
 }
 
 .skills-flex {
@@ -29,8 +33,12 @@ header {
   margin: 0px 10px;
 }
 
+#header-link {
+  color: olive;
+}
+
 .nav-link {
-  color:antiquewhite;
+  color:blanchedalmond;
   text-decoration: none;
 }
 
@@ -73,7 +81,7 @@ footer {
 
 
 .banner {
-  color: antiquewhite;
+  color: blanchedalmond;
 }
 
 .about-background {
@@ -88,14 +96,17 @@ footer {
   background-image: url("./images/red-banner.png");
 }
 
+.resume-background {
+  background-image: url("./images/denver-img.jpeg");
+}
+
 .top-banner-title {
-  /* padding:  10px 50px; */
-  padding: 30px 0px 30px 150px;
+  padding: 100px 0px 100px 150px;
 }
 
 .content {
   display: flex;
-  background-color: #f7f4f4;
+  background-color: blanchedalmond;
   width: 85%;
   margin: auto;
   padding: 15px;
@@ -106,6 +117,7 @@ footer {
 .page-title {
   font-size: 70px;
   margin: 0px;
+
   
 }
 
@@ -138,6 +150,7 @@ footer {
   margin: auto;
   width: 500px;
   padding: 60px;
+  background-color: blanchedalmond;
 }
 
 .carousel-img {
