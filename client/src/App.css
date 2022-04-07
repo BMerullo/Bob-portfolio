@@ -1,28 +1,32 @@
 .App {
-  /* text-align: center;  */
   font-family: 'Arvo', serif;
-  background-color: blanchedalmond;
+  background-color: white;
 }
 
 .list {
   list-style: none;
 }
 
-header { 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  opacity: 1;
-  padding:0px 50px;
-  color: olive;
-  background-color: blanchedalmond;
-  position: fixed;
-  width: 100%;
+li {
+  line-height: 0;
 }
 
-.skills-flex {
+/* #Header */
+
+header {
   display: flex;
-  justify-content: center;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0px 150px;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  border-bottom: solid black 1px;
+  z-index: 1;
+}
+
+#header-link {
+  color: black;
 }
 
 .header-list {
@@ -32,29 +36,40 @@ header {
 .header-list-item {
   margin: 0px 10px;
 }
-
-#header-link {
-  color: olive;
+.bob-logo {
+  height: 40px;
 }
 
-.nav-link {
-  color:blanchedalmond;
-  text-decoration: none;
+/* #footer */
+footer {
+  border-top: solid black 1px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 50px 150px 100px;
+  margin: auto;
 }
 
-#footer-link {
-  color: black;
+.footer-logo {
+  height: 70px;
 }
-
-
-
-/* .contact-link-container {
-
-} */
 
 .footer-img {
   height: 20px;
   margin-left: 10px;
+}
+
+.list-label {
+  font-weight: bold;
+}
+
+#connect-link {
+  color: black;
+}
+
+#explore-link {
+  color: black;
+  margin: 15px 0px;
 }
 
 .footer-link-flex {
@@ -63,98 +78,91 @@ header {
   align-items: center;
 }
 
-footer {
-  border-top: solid black 1px ;
-  display: flex;
-  align-items:baseline;
-  justify-content: space-evenly;
-  padding: 50px 0px;
-  /* width: 85%; */
-  margin: auto;
+/* Links */
 
+.nav-link {
+  text-decoration: none;
 }
 
-.list-label {
-  font-weight: bold;
-}
-
-
-
-.banner {
-  color: blanchedalmond;
-}
-
-.about-background {
-  background-image:url("./images/goldfish.jpeg"); 
-}
-
-.skills-background {
-  background-image: url("./images/blue-banner.jpeg");
-}
-
-.projects-background {
-  background-image: url("./images/red-banner.png");
-}
-
-.resume-background {
-  background-image: url("./images/denver-img.jpeg");
-}
+/* #banner */
 
 .top-banner-title {
-  padding: 100px 0px 100px 150px;
+  padding: 100px 0px 0px 150px;
+  margin-bottom: 40px;
+}
+.page-title {
+  font-size: 70px;
+  margin: 0px;
+}
+.eyebrow {
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+/* #content */
+
+.content-body {
+  padding: 0px 150px;
 }
 
 .content {
   display: flex;
-  background-color: blanchedalmond;
-  width: 85%;
-  margin: auto;
-  padding: 15px;
+  background-color: white;
+  margin-bottom: 40px;
+  padding: 15px 150px;
 }
 
-
-
-.page-title {
-  font-size: 70px;
-  margin: 0px;
-
-  
-}
-
-.content-paragraph {
-  flex: 1;
-  padding: 150px 150px;
-  margin: 15px;
-  
-}
-
-.left {
-  border-right: dotted black 1px;
-  
-}
-
-.resume-div {
-  background-color: #999;
+.flex-content {
   display: flex;
-  justify-content: center;
-  padding: 15px 0px;
-  
+  justify-content: space-between;
+  margin: 50px 150px;
 }
 
-.resume-img {
-  height: 1000px;
-  
+.about-content {
+  margin-left: 40px;
 }
+
+.skills-text {
+  margin-right: 100px;
+}
+
+.bob-img {
+  height: 250px;
+  border-radius: 5%;
+  border: groove grey 5px;
+}
+
+#experience {
+  margin-left: 150px;
+}
+
+.attribute {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(236, 233, 233);
+  justify-content: space-evenly;
+  box-shadow: 5px 5px;
+}
+
+.attribute-img {
+  height: 250px;
+  width: 250px;
+  object-position: inherit;
+}
+
+/* #carousel */
 
 .carousel-cont {
-  margin: auto;
-  width: 500px;
-  padding: 60px;
-  background-color: blanchedalmond;
+  margin-left: 30px;
+  width: 510px;
+  background-color: white;
 }
 
 .carousel-img {
-  height: 200px;
+  height: 150px;
   margin: auto;
 }
 
+.skills-flex {
+  display: flex;
+  justify-content: center;
+}
