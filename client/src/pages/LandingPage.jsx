@@ -6,6 +6,7 @@ const LandingPage = () => {
   return (
     <div className="content">
       <h1>HELLO AND WELCOME TO BOB'S PORTFOLIO SITE</h1>
+      <p>test</p>
       <button>
         <Link to="/aboutme">Continue</Link>
       </button>
