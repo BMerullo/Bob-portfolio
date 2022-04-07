@@ -1,35 +1,23 @@
-import './App.css';
-import Footer from './components/Footer';
-// import Header from './components/Header';
-import { Routes, Route } from "react-router-dom";
-import AboutMe from './components/AboutMe';
-import LandingPage from './components/LandingPage';
-import Skills from './components/Skills';
-import Projects from './components/Projects';
-import Resume from './components/Resume';
-import Carousel from './components/Carousel';
-
+import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import AboutMe from './pages/AboutMe'
+import LandingPage from './pages/LandingPage'
+import Web from './pages/Web'
+import Projects from './pages/Projects'
 
 function App() {
-  const title = "Bob Merullo"
-  const email = "bmerullo85@gmail.com"
+  const title = 'Bob Merullo'
 
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<LandingPage/>}/>
+        <Route path="/" element={<LandingPage />} />
         <Route path="/aboutme" element={<AboutMe title={title} />} />
-        <Route path="/skills" element={<Skills title={title}/>}/>
-        <Route path="/projects" element={<Projects title={title}/>}/>
-        <Route path="/resume" element={<Resume title={title}/>}/>
-        <Route path="/test1" element={<Carousel/>} />
-        
+        <Route path="/web" element={<Web title={title} />} />
+        <Route path="/projects" element={<Projects title={title} />} />
       </Routes>
-      <Footer
-        title={title}
-        email={email} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
