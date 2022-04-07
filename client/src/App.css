@@ -48,6 +48,7 @@ footer {
   justify-content: space-between;
   padding: 50px 150px 100px;
   margin: auto;
+  background-color: rgb(247, 244, 244);
 }
 
 .footer-logo {
@@ -136,8 +137,8 @@ footer {
 }
 
 .attribute {
-  height: 300px;
-  width: 300px;
+  height: 250px;
+  width: 250px;
   background-color: rgb(236, 233, 233);
   justify-content: space-evenly;
   box-shadow: 5px 5px;
@@ -152,7 +153,7 @@ footer {
 /* #carousel */
 
 .carousel-cont {
-  margin-left: 30px;
+  margin-left: 40px;
   width: 510px;
   background-color: white;
 }

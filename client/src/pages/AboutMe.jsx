@@ -53,6 +53,9 @@ const AboutMe = (props) => {
             <Carousel />
           </div>
         </div>
+        <h6 className="eyebrow" id="experience">
+          Click an Image to see what Bob brings to the table!
+        </h6>
         <div className="flex-content">
           <div className="attribute">
             <img className="attribute-img" src={computer} alt="computer" />
