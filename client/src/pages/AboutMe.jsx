@@ -1,14 +1,26 @@
 import Layout from '../components/Layout'
 import Carousel from '../components/Carousel'
 import bob from '../images/bob.JPG'
-import computer from '../images/computer.jpeg'
 import desk from '../images/desk.jpeg'
 import lifting from '../images/lifting.jpeg'
+import 'reactjs-popup/dist/index.css'
+import TechModal from '../components/TechModal'
+import WorkspaceModal from '../components/WorkspaceModal'
+import PhysicalModal from '../components/PhysicalModal'
+import React, { useState } from 'react'
 
 const AboutMe = (props) => {
+  const [openTech, setOpenTech] = useState(false)
+  const [openWorkspace, setOpenWorkspace] = useState(false)
+  const [openPhysical, setOpenPhysical] = useState(false)
+
   const { title } = props
+
   return (
     <Layout>
+      {openTech && <TechModal closeTech={setOpenTech} />}
+      {openWorkspace && <WorkspaceModal closeWorkspace={setOpenWorkspace} />}
+      {openPhysical && <PhysicalModal closePhysical={setOpenPhysical} />}
       <div className="content-body">
         <div className="about-background banner">
           <div className="top-banner-title">
@@ -54,18 +66,27 @@ const AboutMe = (props) => {
           </div>
         </div>
         <h6 className="eyebrow" id="experience">
-          Click an Image to see what Bob brings to the table!
+          Click an image to see what Bob brings to the table!
         </h6>
         <div className="flex-content">
-          <div className="attribute">
-            <img className="attribute-img" src={computer} alt="computer" />
-          </div>
-          <div className="attribute">
-            <img className="attribute-img" src={desk} alt="desk" />
-          </div>
-          <div className="attribute">
-            <img className="attribute-img" src={lifting} alt="getting ripped" />
-          </div>
+          <button
+            className="tech-btn"
+            onClick={() => {
+              setOpenTech(true)
+            }}
+          ></button>
+          <button
+            className="workspace-btn"
+            onClick={() => {
+              setOpenWorkspace(true)
+            }}
+          ></button>
+          <button
+            className="physical-btn"
+            onClick={() => {
+              setOpenPhysical(true)
+            }}
+          ></button>
         </div>
       </div>
     </Layout>

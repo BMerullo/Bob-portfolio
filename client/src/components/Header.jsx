@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import logo from '../images/logos/logo.png'
 
 const Header = (props) => {
-  const { title } = props
+  // const { title } = props
 
   return (
     <header>
