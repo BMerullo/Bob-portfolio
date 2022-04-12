@@ -149,6 +149,14 @@ footer {
   object-position: inherit;
 }
 
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border-style: solid black 3px;
+  margin: 50px 150px;
+}
+
 /* #carousel */
 
 .carousel-cont {
@@ -201,10 +209,16 @@ footer {
 }
 
 .close-btn {
-  background-color: black;
-  color: white;
+  background-image: url('./images/close-button.png');
+  background-size: cover;
+  background-position: center;
   border-radius: 50%;
   margin-left: auto;
+  height: 40px;
+  width: 40px;
+  border-style: solid black 1px;
+  margin-top: -10px;
+  margin-right: -10px;
 }
 
 /* #modal */
@@ -212,8 +226,8 @@ footer {
 .modal-background {
   width: 100vw;
   height: 100vw;
-  background-color: rgba(200, 200, 200);
-  padding-bottom: 800px;
+  background-color: rgba(200, 200, 200, 0.35);
+  padding-bottom: 700px;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -223,7 +237,7 @@ footer {
 
 .modal-container {
   width: 500px;
-  height: 500px;
+  /* height: 600px; */
   border-radius: 20px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -231,7 +245,8 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* padding: 25px; */
+  padding: 0px 0px;
+  overflow: visible;
 }
 
 .modal-img {
@@ -239,4 +254,14 @@ footer {
   width: 300px;
   border-radius: 15%;
   margin: 0px;
+}
+
+.test {
+  height: 300px;
+  width: 250px;
+  border-style: solid black 3px;
+  background-color: #999;
+  color: red;
+  border-radius: 5%;
+  margin: 20px 30px;
 }

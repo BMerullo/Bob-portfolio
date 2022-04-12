@@ -26,7 +26,16 @@ const Header = (props) => {
             web
           </Link>
         </li>
-        {/* <li className="header-list-item"><Link className="nav-link" id="header-link" to="/resume">Resume</Link></li> */}
+        {/* <li className="header-list-item">
+          <span className="nav-link" id="header-link">
+            |
+          </span>
+        </li> */}
+        <li>
+          <p className="nav-link" id="header-link">
+            connect
+          </p>
+        </li>
       </ul>
     </header>
   )

@@ -6,9 +6,7 @@ const TechModal = (props) => {
   return (
     <div className="modal-background">
       <div className="modal-container">
-        <button className="close-btn" onClick={() => closeTech(false)}>
-          X
-        </button>
+        <button className="close-btn" onClick={() => closeTech(false)}></button>
 
         <div className="modal-title">
           <h1>Equipment</h1>

@@ -1,5 +1,6 @@
 import React from 'react'
 import lifting from '../images/lifting.jpeg'
+import close from '../images/close-button.png'
 
 const PhysicalModal = (props) => {
   const { closePhysical } = props
@@ -7,7 +8,7 @@ const PhysicalModal = (props) => {
     <div className="modal-background">
       <div className="modal-container">
         <button className="close-btn" onClick={() => closePhysical(false)}>
-          X
+          {/* <img src={close} alt="" /> */}
         </button>
 
         <div className="modal-title">

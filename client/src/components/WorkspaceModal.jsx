@@ -6,9 +6,10 @@ const WorkspaceModal = (props) => {
   return (
     <div className="modal-background">
       <div className="modal-container">
-        <button className="close-btn" onClick={() => closeWorkspace(false)}>
-          X
-        </button>
+        <button
+          className="close-btn"
+          onClick={() => closeWorkspace(false)}
+        ></button>
 
         <div className="modal-title">
           <h1>Work Space</h1>
