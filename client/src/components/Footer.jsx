@@ -9,7 +9,9 @@ const Footer = (props) => {
   return (
     <footer>
       <div>
-        <img className="footer-logo" src={logo} alt="logo" />
+        <Link to="/">
+          <img className="footer-logo" src={logo} alt="logo" />
+        </Link>
         <p>{email}</p>
       </div>
       <div>
