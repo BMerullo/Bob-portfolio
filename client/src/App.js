@@ -4,6 +4,7 @@ import AboutMe from './pages/AboutMe'
 import LandingPage from './pages/LandingPage'
 import Web from './pages/Web'
 import Projects from './pages/Projects'
+import Dropdown from './components/Dropdown'
 
 function App() {
   const title = 'Bob Merullo'
@@ -15,6 +16,7 @@ function App() {
         <Route path="/aboutme" element={<AboutMe title={title} />} />
         <Route path="/web" element={<Web title={title} />} />
         <Route path="/projects" element={<Projects title={title} />} />
+        <Route path="/test" element={<Dropdown />} />
       </Routes>
     </div>
   )

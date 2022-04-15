@@ -1,18 +1,26 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import chuck from '../images/Charlie.jpg'
 
 const LandingPage = () => {
   return (
-    <div className="content">
-      <h1>HELLO AND WELCOME TO BOB'S PORTFOLIO SITE</h1>
-      <p>test</p>
-      <button>
-        <Link to="/aboutme">Continue</Link>
-      </button>
-      <img className="bob-img" src={chuck} alt="charlie" />
+    <div style={styleSheet}>
+      <h1>this is a style test</h1>
+      <p style={pStyle}>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, totam
+        esse distinctio corporis asperiores vel repellat molestias ducimus vitae
+        recusandae velit accusamus in ab quam facilis ipsa? In, saepe dolores?
+      </p>
     </div>
   )
 }
 
 export default LandingPage
+
+const styleSheet = {
+  background: 'blue',
+  color: 'white',
+  pading: '50px',
+}
+
+const pStyle = {
+  color: 'red',
+}

@@ -1,3 +1,8 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
 .App {
   font-family: 'Arvo', serif;
   background-color: white;
@@ -9,6 +14,7 @@
 
 li {
   line-height: 0;
+  color: black;
 }
 
 /* #Header */
@@ -24,20 +30,33 @@ header {
   border-bottom: solid black 1px;
   z-index: 1;
 }
+.header-list {
+  display: flex;
+  color: black;
+}
 
 #header-link {
   color: black;
 }
 
-.header-list {
-  display: flex;
+#header-link:hover {
+  color: #999;
 }
 
-.header-list-item {
-  margin: 0px 10px;
-}
 .bob-logo {
   height: 40px;
+}
+
+.connect-container {
+  /* border-right: 2px solid black;
+  padding-right: 10px;
+  margin-right: 10px; */
+  text-align: right;
+}
+
+.navbar {
+  padding: 0px;
+  margin: 0px;
 }
 
 /* #footer */
@@ -68,9 +87,19 @@ footer {
   color: black;
 }
 
+#connect-link:hover {
+  text-decoration: underline;
+  transition: 0.8s;
+}
+
 #explore-link {
   color: black;
   margin: 15px 0px;
+}
+
+#explore-link:hover {
+  text-decoration: underline;
+  transition: 0.8s;
 }
 
 .footer-link-flex {
@@ -101,9 +130,9 @@ footer {
 }
 /* #content */
 
-.content-body {
+/* .content-body {
   padding: 0px 150px;
-}
+} */
 
 .content {
   display: flex;
@@ -140,14 +169,21 @@ footer {
   height: 250px;
   width: 250px;
   background-color: rgb(236, 233, 233);
-  justify-content: space-evenly;
-  box-shadow: 5px 5px;
+  /* box-shadow: 5px 5px; */
 }
 
 .attribute-img {
   height: 250px;
   width: 250px;
   object-position: inherit;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  border-style: solid black 3px;
+  margin: 50px 150px;
 }
 
 /* #carousel */
@@ -166,4 +202,165 @@ footer {
 .skills-flex {
   display: flex;
   justify-content: center;
+}
+
+/* #Buttons */
+
+.tech-btn {
+  height: 250px;
+  width: 300px;
+  background-image: url('./images/computer.webp');
+  background-size: cover;
+  border-radius: 15%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 20px;
+}
+
+.workspace-btn {
+  height: 250px;
+  width: 300px;
+  background-image: url('./images/desk.jpeg');
+  background-size: cover;
+  border-radius: 15%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 20px;
+}
+
+.physical-btn {
+  height: 250px;
+  width: 300px;
+  background-image: url('./images/lifting.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  background-image: url('./images/close-button.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin-left: auto;
+  height: 40px;
+  width: 40px;
+  border-style: none;
+  margin-top: -10px;
+  margin-right: -10px;
+}
+
+/* .connect-btn {
+  font-size: 100%;
+  border: 0;
+  padding: 0;
+  background-color: white;
+} */
+
+.connect-btn:hover {
+  color: #999;
+}
+
+/* #modal */
+
+.modal-background {
+  width: 100vw;
+  height: 100vw;
+  background-color: rgba(200, 200, 200, 0.35);
+  padding-bottom: 700px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modal-container {
+  width: 500px;
+  /* height: 600px; */
+  border-radius: 20px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px;
+  overflow: visible;
+}
+
+.modal-img {
+  height: 250px;
+  width: 300px;
+  border-radius: 15%;
+  margin: 0px;
+}
+
+.test {
+  height: 300px;
+  width: 250px;
+  border-style: solid black 3px;
+  background-color: #999;
+  color: red;
+  border-radius: 5%;
+  margin: 20px 30px;
+}
+
+/* #Dropdown */
+
+.dropdown {
+  width: 250px;
+}
+
+.dropdown .dropdown-btn {
+  padding: 8px 10px 0px 0px;
+  background-color: #fff;
+  /* box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06); */
+  /* font-weight: bold; */
+  color: #333;
+  /* display: flex;
+  align-items: center;
+  justify-content: space-between; */
+  cursor: pointer;
+}
+
+.dropdown .dropdown-content {
+  position: absolute;
+  top: 110%;
+  padding: 0px;
+  left: 0;
+  background: white;
+  /* box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06); */
+  font-weight: 500;
+  color: black;
+  width: 95%;
+  text-align: right;
+  overflow: hidden;
+}
+
+.dropdown .dropdown-content .dropdown-item {
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.2s;
+  color: black;
+}
+
+.dropdown .dropdown-content .dropdown-item:hover {
+  background: #999;
+  color: black;
+}
+
+.dropdown-content {
+  margin: 15px 50px 0px 0px;
+  color: black;
+  border: 2px solid black;
+  border-radius: 10%;
+}
+
+.dropdown-item {
+  color: black;
+}
+
+.dropdown-btn:hover {
+  color: #999;
 }

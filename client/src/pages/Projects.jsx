@@ -10,6 +10,26 @@ const Projects = (props) => {
             <h1 className="page-title">Projects</h1>
             <h5 className="eyebrow">A collection of my work</h5>
           </div>
+          <div className="project-container">
+            <div className="test">
+              <h1>Test Div</h1>
+            </div>
+            <div className="test">
+              <h1>Test Div</h1>
+            </div>
+            <div className="test">
+              <h1>Test Div</h1>
+            </div>
+            <div className="test">
+              <h1>Test Div</h1>
+            </div>
+            <div className="test">
+              <h1>Test Div</h1>
+            </div>
+            <div className="test">
+              <h1>Test Div</h1>
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
