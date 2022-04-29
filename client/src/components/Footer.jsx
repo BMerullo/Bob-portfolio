@@ -23,14 +23,14 @@ const Footer = (props) => {
             </Link>
           </li>
           <li>
-            <Link className="nav-link" id="explore-link" to="/skills">
+            <Link className="nav-link" id="explore-link" to="/projects">
               projects
             </Link>
           </li>
           <li>
-            <Link className="nav-link" id="explore-link" to="/projects">
+            {/* <Link className="nav-link" id="explore-link" to="/web">
               web
-            </Link>
+            </Link> */}
           </li>
         </ul>
       </div>

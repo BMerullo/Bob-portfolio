@@ -5,9 +5,10 @@ import LandingPage from './pages/LandingPage'
 import Web from './pages/Web'
 import Projects from './pages/Projects'
 import Dropdown from './components/Dropdown'
+import React, { useState } from 'react'
 
 function App() {
-  const title = 'Bob Merullo'
+  const title = 'BOB MERULLO'
 
   return (
     <div className="App">

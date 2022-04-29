@@ -10,7 +10,7 @@ const NavBar = (props) => {
           <div className="dropdown">
             <div
               className="dropdown-btn"
-              onMouseEnter={(e) => setIsActive(!isActive)}
+              onClick={(e) => setIsActive(!isActive)}
             >
               connect
             </div>
@@ -19,9 +19,22 @@ const NavBar = (props) => {
                 className="dropdown-content"
                 onMouseLeave={(e) => setIsActive(!isActive)}
               >
-                <div className="dropdown-item">linkedin</div>
-                <div className="dropdown-item">github</div>
-                <div className="dropdown-item">bmerullo85@gmail.com</div>
+                <div className="dropdown-item">
+                  <a
+                    className="dropdown-link"
+                    href="https://www.linkedin.com/in/bobmerullo/"
+                  >
+                    linkedin
+                  </a>
+                </div>
+                <div className="dropdown-item">
+                  <a
+                    className="dropdown-link"
+                    href="https://github.com/BMerullo"
+                  >
+                    github
+                  </a>
+                </div>
               </div>
             )}
           </div>
@@ -38,7 +51,7 @@ const NavBar = (props) => {
         </li>
         {/* <li className="header-list-item">
           <Link className="nav-link" id="header-link" to="/web">
-            web
+          web
           </Link>
         </li> */}
       </ul>
