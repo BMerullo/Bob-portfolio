@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const LandingPage = () => {
   return (
@@ -9,6 +10,9 @@ const LandingPage = () => {
         esse distinctio corporis asperiores vel repellat molestias ducimus vitae
         recusandae velit accusamus in ab quam facilis ipsa? In, saepe dolores?
       </p>
+      <Link style={pStyle} to="/aboutme">
+        click here
+      </Link>
     </div>
   )
 }
