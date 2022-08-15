@@ -1,10 +1,10 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
     <div style={styleSheet}>
-      <h1>this is a style test</h1>
+      <h1>BOB MERULLO</h1>
       <p style={pStyle}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, totam
         esse distinctio corporis asperiores vel repellat molestias ducimus vitae
@@ -14,17 +14,17 @@ const LandingPage = () => {
         click here
       </Link>
     </div>
-  )
-}
+  );
+};
 
-export default LandingPage
+export default LandingPage;
 
 const styleSheet = {
-  background: 'blue',
-  color: 'white',
-  pading: '50px',
-}
+  background: "blue",
+  color: "white",
+  pading: "50px",
+};
 
 const pStyle = {
-  color: 'red',
-}
+  color: "red",
+};
