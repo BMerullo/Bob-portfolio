@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <div style={styleSheet}>
-      <h1>BOB MERULLO</h1>
+      <h1>Landing page</h1>
       <p style={pStyle}>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, totam
         esse distinctio corporis asperiores vel repellat molestias ducimus vitae
