@@ -1,17 +1,17 @@
-import Layout from '../components/Layout'
-import Carousel from '../components/Carousel'
-import bob from '../images/bob.JPG'
-import TechModal from '../components/TechModal'
-import WorkspaceModal from '../components/WorkspaceModal'
-import PhysicalModal from '../components/PhysicalModal'
-import React, { useState } from 'react'
+import Layout from "../components/Layout";
+import Carousel from "../components/Carousel";
+import bob from "../images/bob.JPG";
+import TechModal from "../components/TechModal";
+import WorkspaceModal from "../components/WorkspaceModal";
+import PhysicalModal from "../components/PhysicalModal";
+import React, { useState } from "react";
 
 const AboutMe = (props) => {
-  const [openTech, setOpenTech] = useState(false)
-  const [openWorkspace, setOpenWorkspace] = useState(false)
-  const [openPhysical, setOpenPhysical] = useState(false)
+  const [openTech, setOpenTech] = useState(false);
+  const [openWorkspace, setOpenWorkspace] = useState(false);
+  const [openPhysical, setOpenPhysical] = useState(false);
 
-  const { title } = props
+  const { title } = props;
 
   return (
     <Layout>
@@ -62,32 +62,32 @@ const AboutMe = (props) => {
             <Carousel />
           </div>
         </div>
-        <h6 className="eyebrow" id="experience">
+        {/* <h6 className="eyebrow" id="experience">
           Click an image to see what Bob brings to the table!
-        </h6>
+        </h6> */}
         <div className="flex-content">
           <button
             className="tech-btn"
             onClick={() => {
-              setOpenTech(true)
+              setOpenTech(true);
             }}
           ></button>
           <button
             className="workspace-btn"
             onClick={() => {
-              setOpenWorkspace(true)
+              setOpenWorkspace(true);
             }}
           ></button>
           <button
             className="physical-btn"
             onClick={() => {
-              setOpenPhysical(true)
+              setOpenPhysical(true);
             }}
           ></button>
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default AboutMe
+export default AboutMe;

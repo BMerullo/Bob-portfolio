@@ -1,5 +1,6 @@
 const Project = require("../models/projects.model");
 const jwt = require("jsonwebtoken");
+const multer = require("multer");
 
 module.exports = {
   findAllProjects: (req, res) => {
@@ -50,7 +51,9 @@ module.exports = {
       complete: true,
     });
     newProjectObj.createdBy = decodedJWT.payload.id;
-
+    if (req.file) {
+      newProjectObj.projectImage = req.file.path;
+    }
     newProjectObj
       .save()
       .then((newProject) => {

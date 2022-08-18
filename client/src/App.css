@@ -4,7 +4,7 @@ body {
 }
 
 .App {
-  font-family: 'Hind Siliguri', sans-serif;
+  font-family: "Hind Siliguri", sans-serif;
   background-color: white;
 }
 
@@ -166,7 +166,7 @@ footer {
 }
 
 #starwars {
-  background-image: url('./images/project-img/starwars-api.png');
+  background-image: url("./images/project-img/starwars-api.png");
   background-size: cover;
 }
 
@@ -239,7 +239,7 @@ footer {
 .tech-btn {
   height: 250px;
   width: 300px;
-  background-image: url('./images/computer.webp');
+  background-image: url("./images/computer.webp");
   background-size: cover;
   border-radius: 15%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -249,7 +249,7 @@ footer {
 .workspace-btn {
   height: 250px;
   width: 300px;
-  background-image: url('./images/desk.jpeg');
+  background-image: url("./images/desk.jpeg");
   background-size: cover;
   border-radius: 15%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -259,7 +259,7 @@ footer {
 .physical-btn {
   height: 250px;
   width: 300px;
-  background-image: url('./images/lifting.jpeg');
+  background-image: url("./images/lifting.jpeg");
   background-size: cover;
   background-position: center;
   border-radius: 15%;
@@ -268,7 +268,7 @@ footer {
 }
 
 .close-btn {
-  background-image: url('./images/close-button.jpeg');
+  background-image: url("./images/close-button.jpeg");
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -383,4 +383,44 @@ footer {
 
 .dropdown-btn:hover {
   color: #999;
+}
+
+/* form */
+
+form {
+  padding-top: 80px;
+}
+
+.form-flex {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  height: 50vh;
+}
+
+.input {
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 200px;
+  font-size: small;
+  padding-left: 5px;
+  padding-bottom: 3px;
+}
+
+label {
+  padding-left: 5px;
+}
+
+.text-box {
+  height: 100px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border-style: solid black 5px;
+}
+
+.submit-btn {
+  width: 70px;
+  height: 30px;
+  border-radius: 8px;
 }
