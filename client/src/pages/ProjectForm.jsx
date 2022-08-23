@@ -11,25 +11,27 @@ const ProjectForm = (props) => {
             <h1 className="page-title">New Project</h1>
           </div>
           <div className="form-flex">
-            <form action="">
-              <label>title</label>
-              <div>
-                <input
-                  className="input"
-                  type="text"
-                  name="title"
-                  placeholder="username"
-                />
-              </div>
-              <label>description</label>
-              <div>
-                <textarea className="text-box" type="textarea" name="title" />
-              </div>
-              <label>add image</label>
-              <div>
-                <input className="input" type="file" name="image" />
-              </div>
-            </form>
+            <div className="prject-form-container">
+              <form className="project-form" action="">
+                <label>title</label>
+                <div>
+                  <input
+                    className="input"
+                    type="text"
+                    name="title"
+                    placeholder="username"
+                  />
+                </div>
+                <label>description</label>
+                <div>
+                  <textarea className="text-box" type="textarea" name="title" />
+                </div>
+                <label>add image</label>
+                <div>
+                  <input className="input" type="file" name="image" />
+                </div>
+              </form>
+            </div>
           </div>
         </div>
         <div className="form-flex">

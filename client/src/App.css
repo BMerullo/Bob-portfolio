@@ -395,13 +395,16 @@ form {
   display: flex;
   justify-content: center;
   justify-items: center;
-  height: 50vh;
+}
+
+.project-form {
+  width: 600px;
 }
 
 .input {
   border-radius: 8px;
   margin-bottom: 20px;
-  width: 200px;
+  width: 100%;
   font-size: small;
   padding-left: 5px;
   padding-bottom: 3px;
@@ -411,16 +414,22 @@ label {
   padding-left: 5px;
 }
 
+.project-form-container {
+  width: 600px;
+}
+
 .text-box {
   height: 100px;
   width: 100%;
   margin-bottom: 10px;
   border-radius: 8px;
   border-style: solid black 5px;
+  font-size: small;
 }
 
 .submit-btn {
   width: 70px;
   height: 30px;
   border-radius: 8px;
+  margin-bottom: 30vh;
 }
