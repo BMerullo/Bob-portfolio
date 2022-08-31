@@ -19,13 +19,13 @@ const AboutMe = (props) => {
       {openWorkspace && <WorkspaceModal closeWorkspace={setOpenWorkspace} />}
       {openPhysical && <PhysicalModal closePhysical={setOpenPhysical} />}
       <div className="content-body">
-        <div className="about-background banner">
+        <main className="about-background banner">
           <div className="top-banner-title">
             <h1 className="page-title">{title}</h1>
-            <h5 className="eyebrow">Web Developer</h5>
+            <h5 className="eyebrow">web developer</h5>
           </div>
-        </div>
-        <div className="content">
+        </main>
+        <section className="content">
           <img
             // className="carousel-cont"
             className="bob-img"
@@ -33,7 +33,7 @@ const AboutMe = (props) => {
             alt="bob"
           />
           <div className="about-content">
-            <h6 className="eyebrow">What about Bob?</h6>
+            {/* <h6 className="eyebrow">What about Bob?</h6> */}
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -44,11 +44,11 @@ const AboutMe = (props) => {
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
-        </div>
+        </section>
         <h6 className="eyebrow" id="experience">
           Experience
         </h6>
-        <div className="content">
+        <section className="content">
           <p className="skills-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -61,11 +61,11 @@ const AboutMe = (props) => {
           <div className="carousel-cont">
             <Carousel />
           </div>
-        </div>
+        </section>
         {/* <h6 className="eyebrow" id="experience">
           Click an image to see what Bob brings to the table!
         </h6> */}
-        <div className="flex-content">
+        <article className="flex-content">
           <button
             className="tech-btn"
             onClick={() => {
@@ -84,7 +84,7 @@ const AboutMe = (props) => {
               setOpenPhysical(true);
             }}
           ></button>
-        </div>
+        </article>
       </div>
     </Layout>
   );

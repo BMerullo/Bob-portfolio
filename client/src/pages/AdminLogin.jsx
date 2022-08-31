@@ -28,7 +28,8 @@ const AdminLogin = (props) => {
         console.log(res.data, "here is the res.data");
         localStorage.setItem("userId", res.data.userId);
         setLocalStorageId(res.data.userId);
-        navigate(`/project-form/${localStorage.userId}`);
+
+        navigate(`/admn-portal/${localStorage.userId}`);
       })
       .catch((err) => {
         console.log(err);
@@ -66,13 +67,15 @@ const AdminLogin = (props) => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              <button
-                className="submit-btn"
-                type="submit"
-                // onSubmit={(e) => login}
-              >
-                Submit
-              </button>
+              <div className="form-flex">
+                <button
+                  className="submit-btn"
+                  type="submit"
+                  // onSubmit={(e) => login}
+                >
+                  Submit
+                </button>
+              </div>
             </form>
           </div>
         </div>

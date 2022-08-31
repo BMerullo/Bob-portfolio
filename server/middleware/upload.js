@@ -1,29 +1,27 @@
-const path = require("path");
 const multer = require("multer");
+const { v4: uuidv4 } = require("uuid");
+const path = require("path");
 
-var storage = multer.diskStorage({
+const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, "uploads/");
   },
+
   filename: function (req, file, cb) {
     let ext = path.extname(file.originalname);
-    cb(null, Date.now() + ext);
+    cb(null, uuidv4() + "-" + Date.now() + ext);
   },
 });
 
-var upload = multer({
-  storage: storage,
-  fileFilter: function (req, file, callback) {
-    if (file.mimetype == "image/png" || file.mimetype == "image/jpeg") {
-      callback(null, true);
-    } else {
-      console.log("Only jpg & png files supported");
-      callback(null, false);
-    }
-  },
-  limits: {
-    fileSize: 1024 * 1024 * 2,
-  },
-});
+const fileFilter = (req, file, cb) => {
+  const allowedFileTypes = ["image/jpeg", "image/jpg", "image/png"];
+  if (allowedFileTypes.includes(file.mimetype)) {
+    cb(null, true);
+  } else {
+    cb(null, false);
+  }
+};
+
+let upload = multer({ storage, fileFilter });
 
 module.exports = upload;

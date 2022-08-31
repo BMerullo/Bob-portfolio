@@ -7,7 +7,8 @@ module.exports = (app) => {
   app.get("/api/projects", projectsController.findAllProjects);
   app.post(
     "/api/projects",
-    upload.single("projectImage"),
+    authenticate,
+    upload.single("image"),
     projectsController.createNewProject
   );
   app.get(

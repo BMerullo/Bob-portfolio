@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
-import Footer from './Footer'
-import Header from './Header'
+import React, { useState } from "react";
+import Footer from "./Footer";
+import Header from "./Header";
 
-const Layout = ({ children }) => {
+const Layout = ({ children }, props) => {
   return (
     <>
       <Header />
       {children}
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

@@ -46,14 +46,24 @@ module.exports = {
   },
 
   createNewProject: (req, res) => {
-    const newProjectObj = new Project(req.body);
+    const title = req.body.title;
+    const description = req.body.description;
+    const image = req.file.filename;
+
+    const newProjectData = {
+      title,
+      description,
+      image,
+    };
+
+    const newProjectObj = new Project(newProjectData);
     const decodedJWT = jwt.decode(req.cookies.usertoken, {
       complete: true,
     });
     newProjectObj.createdBy = decodedJWT.payload.id;
-    if (req.file) {
-      newProjectObj.projectImage = req.file.path;
-    }
+    // if (req.file) {
+    //   newProjectObj.image = req.file.filename;
+    // }
     newProjectObj
       .save()
       .then((newProject) => {
