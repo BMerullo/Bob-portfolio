@@ -13,7 +13,7 @@ import ProjectForm from "./pages/ProjectForm";
 import WebForm from "./pages/WebForm";
 
 function App() {
-  const title = "bob merullo";
+  const title = "Bob Merullo";
 
   return (
     <div className="App">
