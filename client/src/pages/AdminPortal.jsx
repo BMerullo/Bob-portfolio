@@ -37,7 +37,7 @@ const AdminPortal = (props) => {
   };
   return (
     <Layout>
-      <div className="content-body">
+      <main className="content-body">
         <div className="about-background banner">
           <div className="top-banner-title-admin">
             <h1 className="page-title">admin portal</h1>
@@ -59,9 +59,12 @@ const AdminPortal = (props) => {
               </button>
             </div>
           </div>
+          <section>
+            <h3>Projects</h3>
+          </section>
           <div className="form-flex"></div>
         </div>
-      </div>
+      </main>
     </Layout>
   );
 };
