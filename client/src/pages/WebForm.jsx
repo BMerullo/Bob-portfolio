@@ -1,11 +1,54 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import ProjectFormComponent from "../components/ProjectFormComponent";
 import axios from "axios";
 
-const WebForm = () => {
+const WebForm = (props) => {
   const navigate = useNavigate();
+  const [project, setProject] = useState({
+    title: "",
+    description: "",
+    image: "",
+  });
+
+  const handleChange = (e) => {
+    setProject({
+      ...project,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const imageChange = (e) => {
+    setProject({ ...project, image: e.target.files[0] });
+    console.log(project.image);
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("image", project.image);
+    formData.append("title", project.title);
+    formData.append("description", project.description);
+
+    console.log(project.image);
+
+    axios
+      .post("http://localhost:8000/api/web", formData, {
+        withCredentials: true,
+      })
+      .then((res) => {
+        console.log(res);
+        setProject({
+          title: "",
+          description: "",
+          image: "",
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   const logout = (e) => {
     e.preventDefault();
@@ -49,7 +92,14 @@ const WebForm = () => {
               </div>
             </div>
           </div>
-          <ProjectFormComponent />
+          <ProjectFormComponent
+            submitHandler={submitHandler}
+            handleChange={handleChange}
+            project={project}
+            // image={image}
+            imageChange={imageChange}
+            // selectedFile={selectedFile}
+          />
         </div>
       </Layout>
     </div>
