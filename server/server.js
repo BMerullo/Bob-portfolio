@@ -21,5 +21,6 @@ require("./config/mongoose.config");
 
 require("./routes/user.routes")(app);
 require("./routes/project.routes")(app);
+require("./routes/web.routes")(app);
 
 app.listen(8000, () => console.log("you are connected at port 8000"));
