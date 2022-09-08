@@ -3,26 +3,25 @@ import Layout from "../components/Layout";
 import axios from "axios";
 
 const Projects = (props) => {
-  const [projectList, setProjectList] = useState([]);
+  const { projectList } = props;
 
-  useEffect(() => {
-    axios
-      .get(`http://localhost:8000/api/projects/`)
-      .then((res) => {
-        console.log(res.data);
-        setProjectList(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get(`http://localhost:8000/api/projects/`)
+  //     .then((res) => {
+  //       console.log(res.data);
+  //       setProjectList(res.data);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, []);
   return (
     <Layout>
       <main className="content-body">
         <section className="projects-background banner">
           <div className="top-banner-title">
-            <h1 className="page-title">projects</h1>
-            <h5 className="eyebrow">a collection of my work</h5>
+            <h1 className="page-title">Projects</h1>
           </div>
         </section>
         <section>
