@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
-  const [isActive, setIsActive] = useState(false)
+  const [isActive, setIsActive] = useState(false);
   return (
     <nav className="navbar">
       <ul className="list header-list">
@@ -35,6 +35,11 @@ const NavBar = (props) => {
                     github
                   </a>
                 </div>
+                <div className="dropdown-item">
+                  <a className="dropdown-link" href="#">
+                    email
+                  </a>
+                </div>
               </div>
             )}
           </div>
@@ -49,6 +54,11 @@ const NavBar = (props) => {
             projects
           </Link>
         </li>
+        <li className="header-list-item">
+          <Link className="nav-link" id="header-link" to="/web">
+            web
+          </Link>
+        </li>
         {/* <li className="header-list-item">
           <Link className="nav-link" id="header-link" to="/web">
           web
@@ -56,7 +66,7 @@ const NavBar = (props) => {
         </li> */}
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;

@@ -14,5 +14,5 @@ module.exports = (app) => {
   app.get("/api/user/web/:userId", webController.findAllWebsByUser);
   app.get("/api/web/:id", webController.findOneWeb);
   app.put("/api/web/:id", webController.updateWeb);
-  app.delete("/api/projects/:id", webController.deleteWeb);
+  app.delete("/api/web/:id", webController.deleteWeb);
 };

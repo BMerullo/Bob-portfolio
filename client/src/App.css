@@ -17,6 +17,12 @@ li {
   color: black;
 }
 
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* #Header */
 
 header {
@@ -238,18 +244,19 @@ footer {
 /* #Buttons */
 
 .tech-btn {
-  height: 250px;
-  width: 300px;
+  height: 230px;
+  width: 280px;
   background-image: url("./images/computer.webp");
   background-size: cover;
+  background-position: center;
   border-radius: 15%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-bottom: 20px;
 }
 
 .workspace-btn {
-  height: 250px;
-  width: 300px;
+  height: 230px;
+  width: 280px;
   background-image: url("./images/desk.jpeg");
   background-size: cover;
   border-radius: 15%;
@@ -258,8 +265,8 @@ footer {
 }
 
 .physical-btn {
-  height: 250px;
-  width: 300px;
+  height: 230px;
+  width: 280px;
   background-image: url("./images/lifting.jpeg");
   background-size: cover;
   background-position: center;
@@ -321,10 +328,11 @@ footer {
 }
 
 .modal-img {
-  height: 250px;
+  height: 225px;
   width: 300px;
   border-radius: 15%;
   margin: 0px;
+  position: relative;
 }
 
 /* #Dropdown */
@@ -449,4 +457,37 @@ label {
 .admin-btn {
   border-radius: 8px;
   margin-left: 20px;
+  font-size: small;
+}
+
+.update-img {
+  height: 20px;
+}
+
+.update-link {
+  margin-right: 5px;
+}
+
+.admin-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.project-list-container {
+  display: flex;
+  margin: 50px 150px;
+}
+
+.project-list {
+  width: 50%;
+  text-align: center;
+  /* text-decoration: underline; */
+}
+.update-links {
+  text-decoration: none;
+  color: #999;
+}
+
+.update-links:hover {
+  color: #666;
 }

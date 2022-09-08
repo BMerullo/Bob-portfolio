@@ -18,13 +18,13 @@ const AboutMe = (props) => {
       {openTech && <TechModal closeTech={setOpenTech} />}
       {openWorkspace && <WorkspaceModal closeWorkspace={setOpenWorkspace} />}
       {openPhysical && <PhysicalModal closePhysical={setOpenPhysical} />}
-      <div className="content-body">
-        <main className="about-background banner">
+      <main className="content-body">
+        <section className="about-background banner">
           <div className="top-banner-title">
             <h1 className="page-title">{title}</h1>
-            <h5 className="eyebrow">web developer</h5>
+            <h5 className="eyebrow">Web Developer</h5>
           </div>
-        </main>
+        </section>
         <section className="content">
           <img
             // className="carousel-cont"
@@ -85,7 +85,7 @@ const AboutMe = (props) => {
             }}
           ></button>
         </article>
-      </div>
+      </main>
     </Layout>
   );
 };

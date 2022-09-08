@@ -1,8 +1,8 @@
-import React from 'react'
-import computer from '../images/computer.webp'
+import React from "react";
+import computer from "../images/computer.webp";
 
 const TechModal = (props) => {
-  const { closeTech } = props
+  const { closeTech } = props;
   return (
     <div className="modal-background">
       <div className="modal-container">
@@ -20,7 +20,7 @@ const TechModal = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TechModal
+export default TechModal;

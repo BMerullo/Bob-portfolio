@@ -1,10 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import axios from "axios";
+import update from "../images/update.png";
 
 const AdminPortal = (props) => {
-  const { title } = props;
+  const { projectList, webList } = props;
   const navigate = useNavigate();
   const btnLink = [
     `/project-form/${localStorage.userId}`,
@@ -59,8 +60,37 @@ const AdminPortal = (props) => {
               </button>
             </div>
           </div>
-          <section>
-            <h3>Projects</h3>
+          <section className="project-list-container">
+            <article className="project-list">
+              <h3>Projects</h3>
+              <div>
+                {projectList.map((project, index) => (
+                  <div key={project._id}>
+                    <Link
+                      className="update-links"
+                      to={`/update-project/${project._id}`}
+                    >
+                      <h5>{project.title}</h5>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </article>
+            <article className="project-list">
+              <h3>Web</h3>
+              <div>
+                {webList.map((web, index) => (
+                  <div key={web._id}>
+                    <Link
+                      className="update-links"
+                      to={`/admn-portal/update-web/${web._id}`}
+                    >
+                      <h5>{web.title}</h5>
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </article>
           </section>
           <div className="form-flex"></div>
         </div>

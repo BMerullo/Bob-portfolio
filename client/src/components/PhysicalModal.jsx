@@ -1,9 +1,9 @@
-import React from 'react'
-import lifting from '../images/lifting.jpeg'
-import close from '../images/close-button.png'
+import React from "react";
+import lifting from "../images/lifting.jpeg";
+import close from "../images/close-button.png";
 
 const PhysicalModal = (props) => {
-  const { closePhysical } = props
+  const { closePhysical } = props;
   return (
     <div className="modal-background">
       <div className="modal-container">
@@ -15,7 +15,7 @@ const PhysicalModal = (props) => {
           <h1>Physical Attributes</h1>
         </div>
         <div className="modal-body">
-          <p>- Able to lift large reems of paper</p>
+          {/* <p>- Able to lift large reems of paper</p> */}
           <p>- Physically conditioned to sit for long hours</p>
           <p>- Exquisite medi carpals </p>
         </div>
@@ -24,7 +24,7 @@ const PhysicalModal = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default PhysicalModal
+export default PhysicalModal;
