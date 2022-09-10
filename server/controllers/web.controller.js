@@ -77,7 +77,16 @@ module.exports = {
   },
 
   updateWeb: (req, res) => {
-    Project.findOneAndUpdate({ _id: req.params.id }, req.body, {
+    const title = req.body.title;
+    const description = req.body.description;
+    const image = req.file.filename;
+
+    const newWebData = {
+      title,
+      description,
+      image,
+    };
+    Project.findOneAndUpdate({ _id: req.params.id }, newWebData, {
       new: true,
       runValidators: true,
     })

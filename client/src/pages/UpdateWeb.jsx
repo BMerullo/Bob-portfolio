@@ -4,36 +4,36 @@ import Layout from "../components/Layout";
 import ProjectFormComponent from "../components/ProjectFormComponent";
 import axios from "axios";
 
-const UpdateProject = (props) => {
+const UpdateWeb = (props) => {
   const { stateChange, setStateChange } = props;
   const { id } = useParams();
   const submitLabal = "update";
   const navigate = useNavigate();
-  const [updatedProject, setUpdatedProject] = useState({
+  const [updatedWeb, setUpdatedWeb] = useState({
     title: "",
     description: "",
     image: "",
   });
 
   const handleChange = (e) => {
-    setUpdatedProject({
-      ...updatedProject,
+    setUpdatedWeb({
+      ...updatedWeb,
       [e.target.name]: e.target.value,
     });
   };
 
   const imageChange = (e) => {
-    setUpdatedProject({ ...updatedProject, image: e.target.files[0] });
-    console.log(updatedProject.image);
+    setUpdatedWeb({ ...updatedWeb, image: e.target.files[0] });
+    console.log(updatedWeb.image);
   };
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8000/api/projects/${id}`)
+      .get(`http://localhost:8000/api/web/${id}`)
       .then((res) => {
         console.log(res.data);
-        setUpdatedProject(res.data);
-        console.log({ updatedProject });
+        setUpdatedWeb(res.data);
+        console.log({ updatedWeb });
       })
       .catch((err) => console.log(err));
   }, []);
@@ -41,22 +41,21 @@ const UpdateProject = (props) => {
   const submitHandler = (e) => {
     e.preventDefault();
     const formData = new FormData();
-    formData.append("image", updatedProject.image);
-    formData.append("title", updatedProject.title);
-    formData.append("description", updatedProject.description);
-    console.log(updatedProject.image, "single project?");
+    formData.append("image", updatedWeb.image);
+    formData.append("title", updatedWeb.title);
+    formData.append("description", updatedWeb.description);
+    console.log(updatedWeb.image, "single project?");
     // setUpdatedProject(formData);
 
     axios
-      .put(`http://localhost:8000/api/projects/${id}`, formData, {
+      .put(`http://localhost:8000/api/web/${id}`, formData, {
         withCredentials: true,
       })
       .then((res) => {
         console.log(res);
-
         setStateChange(stateChange + 1);
         navigate(`/admn-portal/${localStorage.userId}`);
-        console.log(updatedProject);
+        console.log(updatedWeb);
       })
       .catch((err) => {
         console.log(err);
@@ -85,7 +84,7 @@ const UpdateProject = (props) => {
 
   const deleteFilter = (setupId) => {
     axios
-      .delete(`http://localhost:8000/api/projects/${id}`)
+      .delete(`http://localhost:8000/api/web/${id}`)
       .then((res) => {
         console.log(res.data);
         setStateChange(stateChange + 1);
@@ -106,13 +105,13 @@ const UpdateProject = (props) => {
       <main className="content-body">
         <section className="projects-background banner">
           <div className="top-banner-title-admin">
-            <h2>Update {updatedProject.title}</h2>
+            <h2>Update {updatedWeb.title}</h2>
 
             <div>
               <button
                 className="admin-btn"
                 id="delete-btn"
-                onClick={(e) => deleteFilter(updatedProject._id)}
+                onClick={(e) => deleteFilter(updatedWeb._id)}
               >
                 delete
               </button>
@@ -130,8 +129,8 @@ const UpdateProject = (props) => {
             <ProjectFormComponent
               submitHandler={submitHandler}
               handleChange={handleChange}
-              project={updatedProject}
-              setProjectList={setUpdatedProject}
+              project={updatedWeb}
+              setProjectList={setUpdatedWeb}
               submitLabel={submitLabal}
               imageChange={imageChange}
             />
@@ -142,4 +141,4 @@ const UpdateProject = (props) => {
   );
 };
 
-export default UpdateProject;
+export default UpdateWeb;

@@ -1,8 +1,15 @@
 import React from "react";
 
 const ProjectFormComponent = (props) => {
-  // const [selectedFile, setSelectedFile] = useState("");
-  const { submitHandler, project, handleChange, imageChange } = props;
+  const {
+    submitHandler,
+    projectList,
+    handleChange,
+    imageChange,
+    project,
+    submitLabel,
+  } = props;
+
   return (
     <div className="form-flex">
       <div className="prject-form-container">
@@ -45,7 +52,7 @@ const ProjectFormComponent = (props) => {
           </div>
           <div className="form-flex">
             <button className="submit-btn" type="submit">
-              Submit
+              {submitLabel}
             </button>
           </div>
         </form>

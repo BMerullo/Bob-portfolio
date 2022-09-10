@@ -77,13 +77,23 @@ module.exports = {
   },
 
   updateProject: (req, res) => {
-    Project.findOneAndUpdate({ _id: req.params.id }, req.body, {
+    const title = req.body.title;
+    const description = req.body.description;
+    const image = req.file.filename;
+
+    const newProjectData = {
+      title,
+      description,
+      image,
+    };
+    Project.findOneAndUpdate({ _id: req.params.id }, newProjectData, {
       new: true,
       runValidators: true,
     })
       .then((updatedProject) => {
         console.log(updatedProject);
         res.json(updatedProject);
+        console.log(req.body);
       })
       .catch((err) => {
         res.status(400).json(err);

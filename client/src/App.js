@@ -5,19 +5,19 @@ import AboutMe from "./pages/AboutMe";
 import LandingPage from "./pages/LandingPage";
 import Web from "./pages/Web";
 import Projects from "./pages/Projects";
-// import Dropdown from "./components/Dropdown";
 import AdminLogin from "./pages/AdminLogin";
-// import ProjectForm from "./pages/AdminPortal";
 import AdminPortal from "./pages/AdminPortal";
 import ProjectForm from "./pages/ProjectForm";
 import UpdateProject from "./pages/UpdateProject";
 import WebForm from "./pages/WebForm";
+import UpdateWeb from "./pages/UpdateWeb";
 import axios from "axios";
 
 function App() {
   const title = "Bob Merullo";
   const [projectList, setProjectList] = useState([]);
   const [webList, setWebList] = useState([]);
+  const [stateChange, setStateChange] = useState(1);
   useEffect(() => {
     axios
       .get(`http://localhost:8000/api/projects/`)
@@ -28,7 +28,7 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [stateChange]);
 
   useEffect(() => {
     axios
@@ -40,7 +40,7 @@ function App() {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  }, [stateChange]);
 
   return (
     <div className="App">
@@ -70,7 +70,23 @@ function App() {
         <Route path="/web-form/:id" element={<WebForm title={title} />} />
         <Route
           path="/update-project/:id"
-          element={<UpdateProject title={title} />}
+          element={
+            <UpdateProject
+              title={title}
+              stateChange={stateChange}
+              setStateChange={setStateChange}
+            />
+          }
+        />
+        <Route
+          path="/update-web/:id"
+          element={
+            <UpdateWeb
+              title={title}
+              stateChange={stateChange}
+              setStateChange={setStateChange}
+            />
+          }
         />
       </Routes>
     </div>

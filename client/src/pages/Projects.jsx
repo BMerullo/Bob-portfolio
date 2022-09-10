@@ -5,17 +5,6 @@ import axios from "axios";
 const Projects = (props) => {
   const { projectList } = props;
 
-  // useEffect(() => {
-  //   axios
-  //     .get(`http://localhost:8000/api/projects/`)
-  //     .then((res) => {
-  //       console.log(res.data);
-  //       setProjectList(res.data);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }, []);
   return (
     <Layout>
       <main className="content-body">
