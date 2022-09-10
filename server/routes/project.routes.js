@@ -16,6 +16,11 @@ module.exports = (app) => {
     projectsController.findAllProjectsByUser
   );
   app.get("/api/projects/:id", projectsController.findOneProject);
-  app.put("/api/projects/:id", projectsController.updateProject);
+  app.put(
+    "/api/projects/:id",
+    authenticate,
+    upload.single("image"),
+    projectsController.updateProject
+  );
   app.delete("/api/projects/:id", projectsController.deleteProject);
 };

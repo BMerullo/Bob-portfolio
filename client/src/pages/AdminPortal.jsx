@@ -2,7 +2,6 @@ import React from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import axios from "axios";
-import update from "../images/update.png";
 
 const AdminPortal = (props) => {
   const { projectList, webList } = props;
@@ -69,6 +68,7 @@ const AdminPortal = (props) => {
                     <Link
                       className="update-links"
                       to={`/update-project/${project._id}`}
+                      state={{ id: project._id, title: project.title }}
                     >
                       <h5>{project.title}</h5>
                     </Link>
@@ -83,7 +83,7 @@ const AdminPortal = (props) => {
                   <div key={web._id}>
                     <Link
                       className="update-links"
-                      to={`/admn-portal/update-web/${web._id}`}
+                      to={`/update-web/${web._id}`}
                     >
                       <h5>{web.title}</h5>
                     </Link>
