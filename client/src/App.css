@@ -496,3 +496,16 @@ label {
 .update-links:hover {
   color: #666;
 }
+
+/* Web/ Project */
+
+.project-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-img {
+  height: 80vh;
+  margin-bottom: 20vh;
+}
