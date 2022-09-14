@@ -25,28 +25,40 @@ const ProjectFormComponent = (props) => {
               type="text"
               name="title"
               value={project.title}
-              placeholder="username"
+              placeholder="title"
               onChange={handleChange}
             />
           </div>
-          <label>description</label>
+          <label>url</label>
           <div>
-            <textarea
-              className="text-box"
-              type="textarea"
-              name="description"
-              value={project.description}
-              placeholder="add a description"
+            <input
+              className="input"
+              type="text"
+              name="url"
+              value={project.url}
+              placeholder="add a link"
               onChange={handleChange}
             />
+            <label>description</label>
+            <div>
+              <textarea
+                className="text-box"
+                type="textarea"
+                name="description"
+                value={project.description}
+                placeholder="add a description"
+                onChange={handleChange}
+              />
+            </div>
           </div>
-          <label>add image</label>
+          <label>{submitLabel} image</label>
           <div>
             <input
               className="input"
               accept=".png, .jpg, .jpeg"
               type="file"
               name="image"
+              value={null}
               onChange={imageChange}
             />
           </div>

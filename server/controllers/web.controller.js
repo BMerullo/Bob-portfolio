@@ -48,11 +48,13 @@ module.exports = {
   createNewWeb: (req, res) => {
     const title = req.body.title;
     const description = req.body.description;
+    const url = req.body.url;
     const image = req.file.filename;
 
     const newProjectData = {
       title,
       description,
+      url,
       image,
     };
 
@@ -79,11 +81,13 @@ module.exports = {
   updateWeb: (req, res) => {
     const title = req.body.title;
     const description = req.body.description;
+    const url = req.body.url;
     const image = req.file.filename;
 
     const newWebData = {
       title,
       description,
+      url,
       image,
     };
     Project.findOneAndUpdate({ _id: req.params.id }, newWebData, {

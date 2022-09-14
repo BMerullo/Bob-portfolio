@@ -25,15 +25,15 @@ const AboutMe = (props) => {
             <h5 className="eyebrow">Web Developer</h5>
           </div>
         </section>
-        <section className="content">
+        {/* <section className="content">
           <img
-            // className="carousel-cont"
+            
             className="bob-img"
             src={bob}
             alt="bob"
           />
           <div className="about-content">
-            {/* <h6 className="eyebrow">What about Bob?</h6> */}
+            
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -44,10 +44,10 @@ const AboutMe = (props) => {
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>
-        </section>
-        <h6 className="eyebrow" id="experience">
+        </section> */}
+        {/* <h6 className="eyebrow" id="experience">
           Experience
-        </h6>
+        </h6> */}
         <section className="content">
           <p className="skills-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

@@ -12,6 +12,7 @@ const UpdateWeb = (props) => {
   const [updatedWeb, setUpdatedWeb] = useState({
     title: "",
     description: "",
+    url: "",
     image: "",
   });
 
@@ -43,6 +44,7 @@ const UpdateWeb = (props) => {
     const formData = new FormData();
     formData.append("image", updatedWeb.image);
     formData.append("title", updatedWeb.title);
+    formData.append("url", updatedWeb.url);
     formData.append("description", updatedWeb.description);
     console.log(updatedWeb.image, "single project?");
     // setUpdatedProject(formData);

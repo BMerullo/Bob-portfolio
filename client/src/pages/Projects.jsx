@@ -17,6 +17,9 @@ const Projects = (props) => {
           {projectList.map((project, index) => (
             <div key={index} className="flex-form">
               <h3>{project.title}</h3>
+              <a className="nav-link" id="header-link" href={project.url}>
+                Visit Site
+              </a>
               <img src={`../uploads/${project.image}`} alt="test" />
               <h4>{project.description}</h4>
             </div>
