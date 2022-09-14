@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Layout from "../components/Layout";
-import axios from "axios";
 
 const Projects = (props) => {
   const { projectList } = props;
@@ -15,13 +14,16 @@ const Projects = (props) => {
         </section>
         <section>
           {projectList.map((project, index) => (
-            <div key={index} className="flex-form">
-              <h3>{project.title}</h3>
-              <a className="nav-link" id="header-link" href={project.url}>
-                Visit Site
-              </a>
-              <img src={`../uploads/${project.image}`} alt="test" />
-              <h4>{project.description}</h4>
+            <div className="form-flex">
+              <article key={index} className="flex-form">
+                <a className="nav-link" id="header-link" href={project.url}>
+                  <img
+                    className="project-img"
+                    src={`../uploads/${project.image}`}
+                    alt="test"
+                  />
+                </a>
+              </article>
             </div>
           ))}
         </section>
