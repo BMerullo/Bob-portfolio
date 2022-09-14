@@ -6,9 +6,11 @@ import axios from "axios";
 
 const WebForm = (props) => {
   const navigate = useNavigate();
+  const submitLabel = "submit";
   const [project, setProject] = useState({
     title: "",
     description: "",
+    url: "",
     image: "",
   });
 
@@ -29,6 +31,7 @@ const WebForm = (props) => {
     const formData = new FormData();
     formData.append("image", project.image);
     formData.append("title", project.title);
+    formData.append("url", project.url);
     formData.append("description", project.description);
 
     console.log(project.image);
@@ -39,11 +42,7 @@ const WebForm = (props) => {
       })
       .then((res) => {
         console.log(res);
-        setProject({
-          title: "",
-          description: "",
-          image: "",
-        });
+        navigate(`/admn-portal/${localStorage.userId}`);
       })
       .catch((err) => {
         console.log(err);
@@ -96,9 +95,8 @@ const WebForm = (props) => {
             submitHandler={submitHandler}
             handleChange={handleChange}
             project={project}
-            // image={image}
             imageChange={imageChange}
-            // selectedFile={selectedFile}
+            submitLabel={submitLabel}
           />
         </div>
       </Layout>

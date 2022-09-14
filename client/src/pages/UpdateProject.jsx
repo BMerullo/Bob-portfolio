@@ -43,6 +43,7 @@ const UpdateProject = (props) => {
     const formData = new FormData();
     formData.append("image", updatedProject.image);
     formData.append("title", updatedProject.title);
+    formData.append("url", updatedProject.url);
     formData.append("description", updatedProject.description);
     console.log(updatedProject.image, "single project?");
     // setUpdatedProject(formData);
@@ -53,7 +54,6 @@ const UpdateProject = (props) => {
       })
       .then((res) => {
         console.log(res);
-
         setStateChange(stateChange + 1);
         navigate(`/admn-portal/${localStorage.userId}`);
         console.log(updatedProject);

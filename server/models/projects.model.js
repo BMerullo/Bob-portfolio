@@ -14,9 +14,13 @@ const ProjectSchema = new mongoose.Schema(
       maxLength: [500, "Please keep your description under 500 characters"],
     },
 
+    url: {
+      type: String,
+    },
+
     image: {
       type: String,
-      required: [true, "Please uplaod an image"],
+      // required: [true, "Please uplaod an image"],
     },
   },
   { timestamps: true }

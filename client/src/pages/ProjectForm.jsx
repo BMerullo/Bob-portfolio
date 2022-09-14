@@ -10,6 +10,7 @@ const ProjectForm = (props) => {
   const [project, setProject] = useState({
     title: "",
     description: "",
+    url: "",
     image: "",
   });
   console.log(project.image);
@@ -31,6 +32,7 @@ const ProjectForm = (props) => {
     const formData = new FormData();
     formData.append("image", project.image);
     formData.append("title", project.title);
+    formData.append("url", project.url);
     formData.append("description", project.description);
 
     console.log(project.image);

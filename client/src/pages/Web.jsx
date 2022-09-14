@@ -17,6 +17,7 @@ const Web = (props) => {
             {webList.map((web, index) => (
               <div key={web._id}>
                 <h3>{web.title}</h3>
+                <a href={web.url}>Visit Site</a>
                 <img src={`../uploads/${web.image}`} alt="test" />
                 <h4>{web.description}</h4>
               </div>
