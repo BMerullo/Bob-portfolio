@@ -9,20 +9,24 @@ const Web = (props) => {
         <section className="projects-background banner">
           <div className="top-banner-title">
             <h1 className="page-title">Freelance</h1>
-            {/* <h5 className="eyebrow">Fr</h5> */}
           </div>
         </section>
-        <section>
-          <article>
-            {webList.map((web, index) => (
-              <div key={web._id}>
-                <h3>{web.title}</h3>
-                <a href={web.url}>Visit Site</a>
-                <img src={`../uploads/${web.image}`} alt="test" />
-                <h4>{web.description}</h4>
-              </div>
-            ))}
-          </article>
+        <section className="project-container">
+          {webList.map((web, index) => (
+            <div className="project">
+              <img
+                className="project-img"
+                src={`../uploads/${web.image}`}
+                alt="project image"
+              />
+              <a className="nav-link" href={web.url}>
+                <div className="project-info">
+                  <h2>{web.title}</h2>
+                  <h4>{web.description}</h4>
+                </div>
+              </a>
+            </div>
+          ))}
         </section>
       </main>
     </Layout>

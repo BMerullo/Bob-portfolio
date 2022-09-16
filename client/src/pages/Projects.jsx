@@ -12,18 +12,20 @@ const Projects = (props) => {
             <h1 className="page-title">Projects</h1>
           </div>
         </section>
-        <section>
+        <section className="project-container">
           {projectList.map((project, index) => (
-            <div className="form-flex">
-              <article key={index} className="flex-form">
-                <a className="nav-link" id="header-link" href={project.url}>
-                  <img
-                    className="project-img"
-                    src={`../uploads/${project.image}`}
-                    alt="test"
-                  />
-                </a>
-              </article>
+            <div className="project">
+              <img
+                className="project-img"
+                src={`../uploads/${project.image}`}
+                alt="project image"
+              />
+              <a className="nav-link" href={project.url}>
+                <div className="project-info">
+                  <h2>{project.title}</h2>
+                  <h4>{project.description}</h4>
+                </div>
+              </a>
             </div>
           ))}
         </section>
