@@ -265,13 +265,13 @@ footer {
     /* margin-left: 60px;
      */
     width: 100%;
-    padding-left: 30px s;
+    padding-left: 15%;
   }
   .mobile-flex {
-    width: 100%;
+    /* width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
   }
   .carousel-img {
     height: 100px;
