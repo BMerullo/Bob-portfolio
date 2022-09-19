@@ -45,7 +45,12 @@ const NavBar = (props) => {
           </div>
         </li>
         <li className="header-list-item">
-          <Link className="nav-link" id="header-link" to="/aboutme">
+          <Link
+            className="nav-link"
+            activeClassName="active-nav-link"
+            id="header-link"
+            to="/"
+          >
             about
           </Link>
         </li>
@@ -59,11 +64,6 @@ const NavBar = (props) => {
             web
           </Link>
         </li>
-        {/* <li className="header-list-item">
-          <Link className="nav-link" id="header-link" to="/web">
-          web
-          </Link>
-        </li> */}
       </ul>
     </nav>
   );
