@@ -53,10 +53,14 @@ header {
   height: 40px;
 }
 
+@media only screen and (max-width: 730px) {
+  header {
+    padding: 0px 20px;
+    justify-content: flex-start;
+  }
+}
+
 .connect-container {
-  /* border-right: 2px solid black;
-  padding-right: 10px;
-  margin-right: 10px; */
   text-align: right;
 }
 
@@ -114,10 +118,25 @@ footer {
   align-items: center;
 }
 
+.footer-link-container {
+  display: flex;
+}
+@media only screen and (max-width: 730px) {
+  footer {
+    padding: 0px 20px;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
 /* Links */
 
 .nav-link {
   text-decoration: none;
+}
+
+.active-nav-link {
+  color: #666;
 }
 
 .dropdown-link {
@@ -151,6 +170,12 @@ footer {
   font-weight: 800;
 }
 
+@media only screen and (max-width: 730px) {
+  .page-title {
+    font-size: 100px;
+  }
+}
+
 /* #content */
 
 .content {
@@ -174,11 +199,11 @@ footer {
   margin-right: 100px;
 }
 
-.bob-img {
+/* .bob-img {
   height: 250px;
   border-radius: 5%;
   border: groove grey 5px;
-}
+} */
 
 #experience {
   margin-left: 150px;
@@ -197,6 +222,16 @@ footer {
   object-position: inherit;
 }
 
+@media only screen and (max-width: 730px) {
+  .content {
+    display: inline-block;
+    padding: 0px;
+  }
+  .skills-text {
+    margin: auto;
+  }
+}
+
 /* #carousel */
 
 .carousel-cont {
@@ -210,10 +245,10 @@ footer {
   margin: auto;
 }
 
-.skills-flex {
+/* .skills-flex {
   display: flex;
   justify-content: center;
-}
+} */
 
 /* #Buttons */
 
@@ -475,7 +510,7 @@ label {
 
 .project-container {
   /* background-color: green; */
-  margin: 0px 155px 60px 155px;
+  margin: 0px 155px 30vh 155px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 4%;

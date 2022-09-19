@@ -65,7 +65,8 @@ const AboutMe = (props) => {
         {/* <h6 className="eyebrow" id="experience">
           Click an image to see what Bob brings to the table!
         </h6> */}
-        <article className="flex-content">
+        <br />
+        <section className="flex-content">
           <button
             className="tech-btn"
             onClick={() => {
@@ -84,7 +85,7 @@ const AboutMe = (props) => {
               setOpenPhysical(true);
             }}
           ></button>
-        </article>
+        </section>
       </main>
     </Layout>
   );
