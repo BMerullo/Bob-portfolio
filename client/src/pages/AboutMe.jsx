@@ -25,29 +25,7 @@ const AboutMe = (props) => {
             <h5 className="eyebrow">Web Developer</h5>
           </div>
         </section>
-        {/* <section className="content">
-          <img
-            
-            className="bob-img"
-            src={bob}
-            alt="bob"
-          />
-          <div className="about-content">
-            
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-        </section> */}
-        {/* <h6 className="eyebrow" id="experience">
-          Experience
-        </h6> */}
+
         <section className="content">
           <p className="skills-text">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -58,15 +36,15 @@ const AboutMe = (props) => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <div className="carousel-cont">
-            <Carousel />
+          <div className="mobile-flex">
+            <div className="carousel-cont">
+              <Carousel />
+            </div>
           </div>
         </section>
-        {/* <h6 className="eyebrow" id="experience">
-          Click an image to see what Bob brings to the table!
-        </h6> */}
+
         <br />
-        <section className="flex-content">
+        <section className="flex-content" id="modal-container">
           <button
             className="tech-btn"
             onClick={() => {
