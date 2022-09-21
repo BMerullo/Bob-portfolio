@@ -24,8 +24,8 @@ li {
 }
 
 @media only screen and (max-width: 730px) {
-  body {
-    width: auto;
+  html {
+    margin: inherit;
   }
 }
 
@@ -88,6 +88,7 @@ footer {
   padding: 50px 150px 100px;
   margin: auto;
   background-color: rgb(247, 244, 244);
+  /* position: absolute; */
 }
 
 .footer-logo {
@@ -135,9 +136,7 @@ footer {
   footer {
     padding: 0px 20px;
     display: inline-block;
-    width: 120%;
-    /* bottom: 0;
-    position: absolute; */
+    width: 100%;
   }
 }
 
@@ -249,32 +248,23 @@ footer {
 /* #carousel */
 
 .carousel-cont {
-  margin-left: 40px;
-  width: 510px;
+  /* margin-left: 40px; */
+  width: 70%;
   background-color: white;
+  display: flex;
 }
 
 .carousel-img {
   height: 150px;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
+  /* margin: auto; */
 }
 
 @media only screen and (max-width: 730px) {
   .carousel-cont {
-    margin-top: 40px;
-    /* margin-left: 60px;
-     */
-    width: 100%;
-    padding-left: 30px s;
-  }
-  .mobile-flex {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .carousel-img {
-    height: 100px;
+    margin: auto;
+    padding-top: 30px;
   }
 }
 
