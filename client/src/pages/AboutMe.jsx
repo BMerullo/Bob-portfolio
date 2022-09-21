@@ -36,14 +36,11 @@ const AboutMe = (props) => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <div className="mobile-flex">
-            <div className="carousel-cont">
-              <Carousel />
-            </div>
+          <div className="carousel-cont">
+            <Carousel />
           </div>
         </section>
 
-        <br />
         <section className="flex-content" id="modal-container">
           <button
             className="tech-btn"
