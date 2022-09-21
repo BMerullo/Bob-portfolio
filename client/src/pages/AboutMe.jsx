@@ -21,8 +21,8 @@ const AboutMe = (props) => {
       <main className="content-body">
         <section className="about-background banner">
           <div className="top-banner-title">
-            <h1 className="page-title">{title}</h1>
-            <h5 className="eyebrow">Web Developer</h5>
+            <h1 className="page-title">Web Developer</h1>
+            {/* <h5 className="eyebrow">Web Developer in the Denver Area</h5> */}
           </div>
         </section>
 
